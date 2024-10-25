@@ -1,0 +1,135 @@
+﻿/* Основной стиль для страницы */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Контейнер занимает всю высоту экрана */
+.container {
+    min-height: calc(100vh - 100px); /* Учитываем высоту футера */
+    padding-bottom: 20px;
+}
+
+/* Футер всегда внизу */
+footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+/* Заголовок */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 1px;
+}
+
+/* Карточки с увеличенными отступами */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 60px auto; /* Увеличенные отступы между карточками */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Заголовок карточки */
+    .card h5 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* Изображение */
+    .card img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+        .card img:hover {
+            transform: scale(1.03);
+        }
+
+/* Описание карточки */
+.description {
+    font-size: 0.9rem;
+    color: #1a1a8d;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-align: justify;
+    flex-grow: 1; /* Растягиваем блок с описанием */
+}
+
+/* Цена */
+.card p {
+    font-size: 1.2rem;
+    color: #e60023;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Кнопка */
+.button {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+    .button:hover {
+        background: linear-gradient(90deg, #feb47b, #ff7e5f);
+        transform: scale(1.03);
+    }
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card h5 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}

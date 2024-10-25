@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body class="catalog-body">
+
+    <div class="container">
+        <h2>Каталог фотоаппаратов</h2>
+        <div class="row">
+            @foreach (var Products in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <h5>@Products.name</h5>
+                        <img src="@Url.Content(Products.image_path)" alt="@Products.image_path" />
+                        <p class="description" style="color: brown;">@Products.description</p>
+                        <p class="card p">Цена: @Products.price.ToString("C")</p>
+                        <button class="button">Купить</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+  
+
+</body>
+</html>

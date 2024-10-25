@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Профиль Пользователя";
+}
+
+<h2>Здравствуйте, @ViewBag.Name. Ваша роль: Покупатель</h2>
+
+<div class="alert alert-success">
+    <p>Здесь вы можете просмотреть историю заказов, обновить свои данные и просмотреть доступные товары.</p>
+</div>
+
+<!-- Кнопка выхода -->
+<a asp-controller="Home" asp-action="Logout" class="btn btn-danger">Выйти</a>

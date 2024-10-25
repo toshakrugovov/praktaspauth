@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Профиль Администратора";
+}
+
+<h2>Здравствуйте, @ViewBag.Name. Ваша роль: Администратор</h2>
+
+<div class="alert alert-info">
+    <h4>Управление данными</h4>
+    <ul>
+        <li>
+            <a asp-controller="User" asp-action="Manage">Управление пользователями</a>
+        </li>
+        <li>
+            <a asp-controller="Product" asp-action="Manage">Управление товарами</a>
+        </li>
+        <li>
+            <a asp-controller="Order" asp-action="Manage">Управление заказами</a>
+        </li>
+        <li>
+            <a asp-controller="Role" asp-action="Manage">Управление ролями</a>
+        </li>
+    </ul>
+</div>
+
+<!-- Кнопка выхода -->
+<a asp-controller="Home" asp-action="Logout" class="btn btn-danger">Выйти</a>

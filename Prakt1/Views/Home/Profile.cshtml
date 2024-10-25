@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Профиль";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="alert alert-success">
+    Здравствуйте, @ViewBag.Name. Ваша роль: @ViewBag.UserRole.
+</div>
+
+
+<p>Здесь вы можете обновить свои данные, просмотреть историю заказов и т.д.</p>
+<div class="alert alert-info">
+    <h4>Управление профилем</h4>
+    <ul>
+        <li>
+            <a asp-controller="User" asp-action="Izbr">Избранные товары</a>
+        </li>
+        <li>
+            <a asp-controller="User" asp-action="Korzina">Корзина</a>
+        </li>
+        <li>
+            <a asp-controller="User" asp-action="Danny">Редактировать личные данные</a>
+        </li>
+    </ul>
+</div>
+
+
+<a asp-controller="Home" asp-action="Logout" class="btn btn-danger">Выйти</a>
